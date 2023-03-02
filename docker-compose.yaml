@@ -7,6 +7,8 @@ services:
       - 443:443
     volumes:
       - ./apache/prestashop.conf:/etc/apache2/sites-enabled/prestashop.conf
+      - ./apache/certificado.pem:/etc/ssl/certs/certificado.pem
+      - ./apache/chave.key:/etc/ssl/private/chave.key
       - ./prestashop:/app/prestashop
 
   db:
