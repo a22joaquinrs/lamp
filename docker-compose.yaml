@@ -13,6 +13,17 @@ services:
       - ./apache/wordpress.conf:/etc/apache2/sites-enabled/wordpress.conf
       - ./wordpress:/app/wordpress
 
+  php:
+    build: php
+    ports:
+      - 8000:80
+      - 8443:443
+    volumes:
+      - ./php/drupal.conf:/etc/apache2/sites-enabled/drupal.conf
+      - ./apache/certificado.pem:/etc/ssl/certs/certificado.pem
+      - ./apache/chave.key:/etc/ssl/private/chave.key
+      - ./drupal:/app/drupal
+
   db:
     image: mysql
     environment:
