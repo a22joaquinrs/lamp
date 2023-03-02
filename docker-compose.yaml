@@ -6,8 +6,8 @@ services:
       - 80:80
       - 443:443
     volumes:
-      -./apache/prestashop.conf:/etc/apache2/sites-enabled/prestashop.conf
-      -./prestashop:/app/prestashop
+      - ./apache/prestashop.conf:/etc/apache2/sites-enabled/prestashop.conf
+      - ./prestashop:/app/prestashop
 
   db:
     image: mysql
