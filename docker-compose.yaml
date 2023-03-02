@@ -33,6 +33,7 @@ services:
       MYSQL_PASSWORD: abc123.
     volumes:
       - bbdd:/var/lib/mysql
+      - ./dbname.sql:/docker-entrypoint-initdb.d/dbname.sql
 
 volumes:
   bbdd:
