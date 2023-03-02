@@ -9,5 +9,5 @@ EXPOSE 443
 RUN a2enmod ssl
 RUN a2enmod rewrite
 
-CMD chmod 777 /app/prestashop/ && apachctl -D FOREGROUND
+CMD chmod 777 /app/prestashop/ && apachectl -D FOREGROUND
 #CMD apachctl -D FOREGROUND
